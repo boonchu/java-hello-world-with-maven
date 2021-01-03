@@ -10,4 +10,4 @@ deploy:
 	@docker tag boonchu/maigolab_hello:latest localhost:5000/boonchu/maigolab_hello:latest
 	@docker push localhost:5000/boonchu/maigolab_hello 
 
-.PHONY: build deploy
+.PHONY: test build deploy 

@@ -10,7 +10,7 @@ $ mvn compile
 ## Test
 
 ```
-$ mvn test
+$ mvn clean test
 ```
 
 ## Run
@@ -34,4 +34,3 @@ $ mvn archetype:generate \
   -DgroupId=info.maigo.lab.hello \
   -DartifactId=maigolab_hello
 ```
-
