@@ -10,4 +10,8 @@ deploy:
 	@docker tag boonchu/maigolab_hello:latest localhost:5000/boonchu/maigolab_hello:latest
 	@docker push localhost:5000/boonchu/maigolab_hello 
 
-.PHONY: test build deploy 
+exec:
+	@docker run --name=local_demo -p 8085:8080 --net docker-jenkins_jenkins -e SPRING_PROFILES_ACTIVE=demo -d localhost:5000/boonchu/maigolab_hello:latest
+	@docker logs local_demo
+
+.PHONY: test build deploy exec
