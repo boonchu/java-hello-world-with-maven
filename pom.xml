@@ -28,6 +28,19 @@
 
   <dependencies>
 
+    <!-- why and when we'd want to use a Logger over plain old System.out and System.err -->
+    <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-api</artifactId>
+        <version>2.12.1</version>
+    </dependency>
+
+    <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-core</artifactId>
+        <version>2.12.1</version>
+    </dependency>
+
     <!-- https://mvnrepository.com/artifact/com.mashape.unirest/unirest-java -->
     <dependency>
       <groupId>com.mashape.unirest</groupId>
