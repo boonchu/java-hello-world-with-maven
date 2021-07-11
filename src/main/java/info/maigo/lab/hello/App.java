@@ -11,7 +11,7 @@ import com.mashape.unirest.http.*;
 //
 public class App {
 
-  private static final Logger logger = LogManager.getLogger(Log4j2Example.class);
+  private static final Logger logger = LogManager.getLogger(App.class);
 
   public static void main(String[] args) throws Exception {
     for (String name: args) {
