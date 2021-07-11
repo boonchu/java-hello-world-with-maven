@@ -9,17 +9,6 @@
   <name>maigolab_hello</name>
   <url>http://maven.apache.org</url>
 
-  <distributionManagement>
-    <repositories>
-       <repository>
-           <id>nexus.dev</id>
-           <name>nexus dev</name>
-           <url>http://172.30.30.102:8081/repository/springboot/</url>
-           <layout>default</layout>
-       </repository>
-    </repositories>
-  </distributionManagement>
-
   <build>
     <plugins>
       <plugin>
