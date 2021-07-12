@@ -44,3 +44,19 @@ $ mvn archetype:generate \
 * https://www.baeldung.com/java-system-out-println-vs-loggers
 * https://github.com/eugenp/tutorials/tree/master/logging-modules/log4j2
 
+## Log4j2
+
+* https://logging.apache.org/log4j/2.x/manual/configuration.html
+* https://github.com/eugenp/tutorials/tree/master/logging-modules/log4j2
+* https://www.baeldung.com/java-system-out-println-vs-loggers
+
+```
+$ tree src/main/java/
+src/main/java/
+├── info
+│   └── maigo
+│       └── lab
+│           └── hello
+│               └── App.java
+└── log4j.xml
+```

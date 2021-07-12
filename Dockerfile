@@ -4,6 +4,6 @@ USER root
 
 ARG version
 
-ENV JAVA_APP_JAR=maigolab_hello-1.0.0.jar
+ENV JAVA_APP_JAR=target/maigolab_hello-1.0.2.jar
 
 ADD target/$JAVA_APP_JAR /deployments
