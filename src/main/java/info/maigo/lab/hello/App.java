@@ -15,12 +15,10 @@ public class App {
 
   public static void main(String[] args) throws Exception {
     for (String name: args) {
-      // System.out.println("name: " + name);
-      logger.info("name: " + name);
+      logger.info("name: {}" + name);
       String jsonString = new App(name).getUserInfoJSON();
       JSONObject json = new JSONObject(jsonString);
-      // System.out.println(json.toString(2));
-      logger.info(json.toString(2));
+      logger.info("value is {}", json.toString(2));
     }
   }
 
@@ -31,7 +29,6 @@ public class App {
   }
 
   public String getUserInfoURL() {
-    // Users | GitHub Developer Guide: https://developer.github.com/v3/users/
     return "https://api.github.com/users/" + name;
   }
 
