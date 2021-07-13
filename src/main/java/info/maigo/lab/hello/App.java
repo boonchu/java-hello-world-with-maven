@@ -20,7 +20,7 @@ public class App {
       String jsonString = new App(name).getUserInfoJSON();
       JSONObject json = new JSONObject(jsonString);
       // System.out.println(json.toString(2));
-      logger.info(json.toString(2));
+      logger.info("value is {}", json.toString(2));
     }
   }
 
