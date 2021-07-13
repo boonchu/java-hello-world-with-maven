@@ -15,7 +15,7 @@ public class App {
 
   public static void main(String[] args) throws Exception {
     for (String name: args) {
-      logger.info("name: {}" + name);
+      logger.info("name: {}", name);
       String jsonString = new App(name).getUserInfoJSON();
       JSONObject json = new JSONObject(jsonString);
       logger.info("value is {}", json.toString(2));
