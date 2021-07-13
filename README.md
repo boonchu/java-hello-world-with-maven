@@ -60,3 +60,16 @@ src/main/java/
 │               └── App.java
 └── log4j.xml
 ```
+
+## Jira integration
+
+* https://github.com/integrations/jira
+* https://support.atlassian.com/jira-software-cloud/docs/reference-issues-in-your-development-work/
+
+```
+git flow feature start DEV-1-fix-code
+** working on your code **
+git commit -am 'DEV-1 correct code smell issue'
+git flow feature publish DEV-1-fix-code
+** run feature branch in your pipeline to test both analytic and code coverage **
+```
