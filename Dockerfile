@@ -1,8 +1,9 @@
-FROM openjdk:8-jdk-alpine
-RUN addgroup -S java && adduser -S java -G java
-USER java:java
-ARG version
-ENV JAVA_APP_JAR=maigolab_hello-1.0.2.jar
-ADD target/$JAVA_APP_JAR /deployments
-ENTRYPOINT ["java", "-jar", "/deployments/maigolab_hello-1.0.2.jar"]
-
+FROM openjdk:11
+VOLUME /tmp
+EXPOSE 8080
+# RUN addgroup -S java && adduser -S java -G java
+# USER java:java
+COPY target/lib/*.jar /lib/
+ARG JAVA_APP_JAR=target/maigolab_hello-1.0.3.jar
+COPY ${JAVA_APP_JAR} /maigolab_hello.jar
+ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/maigolab_hello.jar"]
