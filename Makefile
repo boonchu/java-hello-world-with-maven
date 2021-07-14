@@ -1,7 +1,10 @@
-all: test build deploy
+all: compile build deploy exec
 
-test:
-	@mvn clean test && mvn package
+compile:
+	@mvn clean test && mvn package && mvn dependency:tree
+
+artifact:
+	@curl -o target/maigolab_hello-1.0.2.jar -u deploy:deploy123 http://172.30.30.102:8081/repository/springboot/info/maigo/lab/hello/maigolab_hello/1.0.2/maigolab_hello-1.0.2.jar  -v
 
 build:
 	@docker build -t boonchu/maigolab_hello .
@@ -12,7 +15,9 @@ deploy:
 
 exec:
 	@docker rm --force local_demo 2>&1 >/dev/null
-	@docker run --name=local_demo -p 8085:8080 --net docker-jenkins_jenkins -e SPRING_PROFILES_ACTIVE=demo -d boonchu/maigolab_hello:dev
+	@docker run --name=local_demo -p 8085:8080 --net docker-jenkins_jenkins -e SPRING_PROFILES_ACTIVE=demo boonchu/maigolab_hello:dev "Hello World!"
+
+log:
 	@docker logs local_demo
 
-.PHONY: test build deploy exec
+.PHONY: compile test build deploy exec log artifact
