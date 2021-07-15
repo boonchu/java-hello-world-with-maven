@@ -73,3 +73,8 @@ git commit -am 'DEV-1 correct code smell issue'
 git flow feature publish DEV-1-fix-code
 ** run feature branch in your pipeline to test both analytic and code coverage **
 ```
+
+## Misc
+
+* https://gustavopeiretti.com/how-to-create-a-microservice-with-spring-boot-and-docker/
+* https://www.section.io/engineering-education/spring-docker/
